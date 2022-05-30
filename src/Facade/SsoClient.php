@@ -1,5 +1,7 @@
 <?php
 
+namespace Fahriztx\EzLaravelSsoClient\Facade;
+
 use Illuminate\Support\Facades\Facade;
 
 class SsoClient extends Facade
