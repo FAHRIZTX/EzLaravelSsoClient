@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class SsoClient
+class SsoClient extends Facade
 {
 	protected static function getFacadeAccessor()
     {
