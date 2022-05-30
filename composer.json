@@ -1,0 +1,19 @@
+{
+    "name": "fahriztx/ez-laravel-sso-client",
+    "description": "Authentication Client Library for Laravel",
+    "type": "library",
+    "require": {
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Fahriztx\\EzLaravelSsoClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Muhammad Fahri",
+            "email": "mfahri.dev@gmail.com"
+        }
+    ]
+}
