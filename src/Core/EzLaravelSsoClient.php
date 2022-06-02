@@ -20,6 +20,21 @@ class EzLaravelSsoClient
 		return $token['data'];
 	}
 
+	public function getUser($email=null)
+	{
+		$signature = $this->generateSignature($email, $this->getClientSecret());
+	    $client_id = $this->getClientId();
+
+	    $res = $this->request('POST', $this->getServerUrl().'/api/v3/secure/getUser', [
+	        'signature' => $signature, 
+	        'client_id' => $client_id, 
+	        'email' => $email
+	    ]);
+
+	    $userRes = $res->getBody();
+	    $userRes = json_decode($userRes, true)['data'];
+	}
+
 	public function generateSignature($string, $secret)
 	{
 		return Token::generateSignature($string, $secret);
